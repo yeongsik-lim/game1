@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 포트폴리오 | 임영식</title>
+    <!-- Tailwind CSS CDN 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter 로드 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Inter 폰트를 기본 폰트로 설정 */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind: bg-slate-50 */
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- 네비게이션 바 -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">
+                <span role="img" aria-label="반짝임">✨</span> HGD.dev
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">소개</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">기술</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">프로젝트</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">연락</a>
+            </nav>
+            <!-- 모바일 메뉴 버튼 (미구현, 디자인 목적으로만) -->
+            <button class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main>
+        <!-- 1. 히어로 섹션 (홈) -->
+        <section id="home" class="py-20 md:py-32 bg-indigo-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <!-- 프로필 이미지 (자리표시자) -->
+                    <img class="w-28 h-28 md:w-36 md:h-36 rounded-full mx-auto mb-6 object-cover shadow-xl border-4 border-white"
+                         src="https://placehold.co/150x150/6366f1/ffffff?text=HGD"
+                         alt="임영식 프로필 이미지">
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                        안녕하세요, <span class="text-indigo-600">임영식</span>입니다.
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-gray-600 mb-8">
+                        유튜버 | 친구야 노래하자
+                    </p>
+                    <a href="#projects" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                        프로젝트 보러가기
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 소개 섹션 (About Me) -->
+        <section id="about" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-indigo-200 inline-block pb-2 mx-auto">
+                    저를 소개합니다 👋
+                </h2>
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl max-w-4xl mx-auto">
+                    <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                        저는 유튜브를 통해 세상을 더 나은 곳으로 만들고자 하는 AI음악가입니다.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        음악을 통해 삶을 조금 더 풍요롭기를 바랍니다.
+                    </p>
+                    <div class="mt-8 text-center">
+                        <a href="#contact" class="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300 border-b border-indigo-600 pb-1">
+                            더 자세한 이야기는 여기서
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 기술 스택 섹션 (Skills) -->
+        <section id="skills" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-indigo-200 inline-block pb-2 mx-auto">
+                    노래 🛠️
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                    <!-- 프론트엔드 카드 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">프론트엔드</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li><span class="font-bold">React</span> / Next.js</li>
+                            <li>Vue.js / Nuxt.js</li>
+                            <li>TypeScript / JavaScript</li>
+                            <li>HTML5 / CSS3 (Tailwind)</li>
+                        </ul>
+                    </div>
+
+                    <!-- 백엔드 카드 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">백엔드</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li><span class="font-bold">Node.js</span> / Express</li>
+                            <li>Python / Django</li>
+                            <li>Java / Spring Boot</li>
+                            <li>REST API 설계</li>
+                        </ul>
+                    </div>
+
+                    <!-- 데이터베이스 카드 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">데이터베이스</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li><span class="font-bold">PostgreSQL</span></li>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>Firebase / Firestore</li>
+                        </ul>
+                    </div>
+
+                    <!-- 도구 및 기타 카드 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">도구 및 기타</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li><span class="font-bold">Git</span> / GitHub</li>
+                            <li>Docker / Kubernetes</li>
+                            <li>AWS / Vercel</li>
+                            <li>Agile / Scrum</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 프로젝트 섹션 (Projects) -->
+        <section id="projects" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-indigo-200 inline-block pb-2 mx-auto">
+                    주요 프로젝트 💡
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 프로젝트 카드 1 -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500">
+                        <img class="w-full h-48 object-cover"
+                             src="https://placehold.co/600x400/312e81/ffffff?text=Project+A"
+                             alt="프로젝트 A 이미지">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">실시간 협업 도구 개발</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                React와 Firebase를 활용하여 실시간 문서 공동 편집 기능을 구현한 SaaS 플랫폼입니다. Websocket 대신 Firestore 실시간 동기화를 사용했습니다.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Firestore</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">TypeScript</span>
+                            </div>
+                            <a href="#" class="mt-4 block text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">
+                                자세히 보기 &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 카드 2 -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500">
+                        <img class="w-full h-48 object-cover"
+                             src="https://placehold.co/600x400/4f46e5/ffffff?text=Project+B"
+                             alt="프로젝트 B 이미지">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">AI 기반 이미지 분류 서비스</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                Python(Django) 사용자 친화적인 API를 구축했습니다. 배포는 Docker를 이용했습니다.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python/Django</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Docker</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">REST API</span>
+                            </div>
+                            <a href="#" class="mt-4 block text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">
+                                자세히 보기 &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 카드 3 -->
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500">
+                        <img class="w-full h-48 object-cover"
+                             src="https://placehold.co/600x400/6366f1/ffffff?text=Project+C"
+                             alt="프로젝트 C 이미지">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">모바일 반응형 랜딩 페이지</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                스타트업 제품을 위한 고성능, SEO 최적화된 마케팅 랜딩 페이지입니다. Next.js와 Tailwind CSS로 개발했습니다.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Next.js</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">SEO</span>
+                            </div>
+                            <a href="#" class="mt-4 block text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">
+                                자세히 보기 &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 연락 섹션 (Contact) -->
+        <section id="contact" class="py-16 md:py-24 bg-indigo-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-indigo-200 inline-block pb-2 mx-auto">
+                    저에게 연락하세요 📧
+                </h2>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+                    <p class="text-center text-lg text-gray-600 mb-6">
+                        프로젝트 협업, 채용 제안 또는 간단한 커피챗도 환영합니다.
+                    </p>
+                    <form onsubmit="event.preventDefault(); showMessage();" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">이름</label>
+                            <input type="text" id="name" name="name" required
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">이메일 주소</label>
+                            <input type="email" id="email" name="email" required
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">메시지</label>
+                            <textarea id="message" name="message" rows="4" required
+                                      class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        <button type="submit"
+                                class="w-full py-3 px-4 border border-transparent rounded-lg shadow-lg text-white font-medium bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 transform hover:scale-[1.01]">
+                            메시지 보내기
+                        </button>
+                    </form>
+
+                    <!-- 메시지 박스 -->
+                    <div id="message-box" class="hidden mt-6 p-4 rounded-lg bg-green-100 text-green-800 border border-green-300 text-center transition duration-300" role="alert">
+                        <p class="font-semibold">메시지가 성공적으로 전송되었습니다! (실제 전송 기능은 포함되지 않습니다.)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4">
+                <a href="https://github.com/your-username" target="_blank" class="mx-3 hover:text-indigo-400 transition duration-300" aria-label="GitHub">
+                    <!-- GitHub SVG Icon -->
+                    <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.418 2.867 8.163 6.842 9.504.5.092.682-.217.682-.483 0-.237-.008-.884-.012-1.748-2.784.608-3.37-1.353-3.37-1.353-.455-1.157-1.11-1.464-1.11-1.464-.908-.62.067-.608.067-.608 1.002.07 1.531 1.034 1.531 1.034.89 1.528 2.341 1.087 2.912.827.091-.64.351-1.087.641-1.336-2.228-.254-4.566-1.116-4.566-4.945 0-1.091.39-1.984 1.03-2.675-.103-.254-.447-1.267.097-2.639 0 0 .84-.268 2.75 1.026A9.563 9.563 0 0112 6.844c.85.003 1.701.115 2.5.337 1.91-1.294 2.748-1.026 2.748-1.026.546 1.372.202 2.385.099 2.639.64.691 1.027 1.584 1.027 2.675 0 3.837-2.342 4.688-4.573 4.939.359.309.678.919.678 1.855 0 1.336-.012 2.415-.012 2.744 0 .267.18.579.688.481C19.136 20.18 22 16.43 22 12.017 22 6.484 17.523 2 12 2z" clip-rule="evenodd"/></svg>
+                </a>
+                <a href="mailto:proinse@naver.com" class="mx-3 hover:text-indigo-400 transition duration-300" aria-label="이메일">
+                    <!-- Email SVG Icon -->
+                    <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M.05 3.518L12 11.231 23.95 3.518 12 0 .05 3.518zM0 4.295v15.41h24V4.295L12 12.008 0 4.295z"/></svg>
+                </a>
+            </div>
+            <p class="text-sm text-gray-400">
+                &copy; 2025 임영식. All rights reserved. 본 웹사이트는 포트폴리오 목적으로 제작되었습니다.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript 함수 -->
+    <script>
+        // 연락처 폼 제출 시 메시지 표시 (실제 전송 기능 없음)
+        function showMessage() {
+            const messageBox = document.getElementById('message-box');
+            messageBox.classList.remove('hidden');
+            
+            // 5초 후 메시지 숨기기
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
